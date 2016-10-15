@@ -15,22 +15,25 @@ class ViewController: UIViewController {
         
     }
     
-    func averageIsAbove(_ a: Double, _ b: Double, _ c: Double) -> Bool {
-    
-    return ((a + b + c) / 3.0) > 75.0
-    
+    func averageIsAbove75(_ a:Double, _ b:Double, _ c:Double) -> Bool {
+        if (a + b + c) / 3 > 75 {
+            return true
+        } else {
+            return false
+        }
     }
     
-    func passwordCombo(username: String, password: Int) -> String {
-        
+    func passwordCombo(username:String, password:Int) -> String {
         switch username {
-        case "Jerry", "Elaine", "Michael":
-            if password % 3 == 0 { return "Welcome!" }
-            return "Access Denied"
+        case "Jerry" , "Elaine" , "Michael":
+            if password % 3 == 0 {
+                return "Welcome!"
+            } else {
+                return "Access Denied"
+            }
         default:
             return "Access Denied"
         }
-        
     }
     
     func describe(emoji: String) -> String { // I did it
